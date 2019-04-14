@@ -16,12 +16,6 @@ $/ cd <project-name>
 $/ yarn
 ```
 
-### Create Prisma server
-
-```sh
-$/ cd datamodel
-```
-
 ### Start Graphql server
 
 ```sh
