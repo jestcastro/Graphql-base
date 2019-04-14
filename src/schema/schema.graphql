@@ -1,0 +1,11 @@
+# import  *  from "account.graphql"
+# import  *  from "record.graphql"
+
+type Query {
+  accounts:[Account!]!
+  records:[Record!]!
+}
+
+# type Mutation {}
+
+# type Subscription {}

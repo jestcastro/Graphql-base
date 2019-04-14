@@ -1,0 +1,8 @@
+type Account {
+  id: String!
+  name: String
+  color: String
+  position: Int
+  userId: String
+  records: [Record!]
+}

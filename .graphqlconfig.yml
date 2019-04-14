@@ -1,0 +1,7 @@
+projects:
+  app:
+    schemaPath: src/schema/schema.graphql
+    includes: ["**/*.graphql"]
+    extensions:
+      endpoints:
+        default: ${env:YOGA_ENDPOINT}

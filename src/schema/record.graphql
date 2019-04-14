@@ -1,0 +1,6 @@
+type Record {
+  id: String!
+  note: String
+  amount: Float
+  amountReferential: Float
+}
