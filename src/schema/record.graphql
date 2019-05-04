@@ -3,4 +3,30 @@ type Record {
   note: String
   amount: Float
   amountReferential: Float
+  account: Account!
+  currency: Currency!
+  transferId: String!
+}
+
+input RecordInput {
+  id: String!
+  note: String!
+  accountId: String!
+  currencyId: String!
+  categoryId: String
+  amount: Float!
+}
+
+input TransferAccountInput {
+  id: String!
+  note: String!
+  accountId: String!
+  currencyId: String!
+  amount: Float!
+}
+
+input TransferInput {
+   current: TransferAccountInput!
+   target: TransferAccountInput!
+   transferId: String!
 }

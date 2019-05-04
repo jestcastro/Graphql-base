@@ -1,0 +1,5 @@
+type Balance {
+  currency:Currency!
+  account:Account!
+  balance: Float!
+}
