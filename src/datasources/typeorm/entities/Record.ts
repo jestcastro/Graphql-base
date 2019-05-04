@@ -27,12 +27,33 @@ export class Record {
   note: string | null;
 
 
+  @Column("varchar", {
+    nullable: false,
+    primary: false,
+    length: 30,
+    name: "currencyId"
+  })
+  currencyId: string;
 
   @ManyToOne(type => Currency, currency => currency.records, { onDelete: 'RESTRICT', onUpdate: 'RESTRICT' })
   @JoinColumn({ name: 'currencyId' })
   currency: Currency | null;
 
+  @Column("varchar", {
+    nullable: false,
+    primary: false,
+    length: 30,
+    name: "accountId"
+  })
+  accountId: string;
 
+  @Column("varchar", {
+    nullable: false,
+    primary: false,
+    length: 30,
+    name: "transferId"
+  })
+  transferId: string;
 
   @ManyToOne(type => Account, account => account.records, { onDelete: 'RESTRICT', onUpdate: 'RESTRICT' })
   @JoinColumn({ name: 'accountId' })

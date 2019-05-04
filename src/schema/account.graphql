@@ -4,5 +4,15 @@ type Account {
   color: String
   position: Int
   userId: String
+  balances:[Balance!]
   records: [Record!]
+}
+
+input AccountInput {
+  id: String!
+  name: String!
+  color: String!
+  position: Int!
+  userId: String!
+  currencyId:String!
 }

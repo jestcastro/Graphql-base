@@ -1,0 +1,7 @@
+type Currency {
+  id: String!
+  name: String
+  referential: Boolean
+  ratioToReferential: Float,
+  position:Int
+}

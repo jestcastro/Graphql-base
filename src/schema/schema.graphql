@@ -1,11 +1,17 @@
 # import  *  from "account.graphql"
 # import  *  from "record.graphql"
+# import  *  from "balance.graphql"
+# import  *  from "currency.graphql"
 
 type Query {
-  accounts:[Account!]!
+  accounts(user:String):[Account!]!
   records:[Record!]!
 }
 
-# type Mutation {}
+type Mutation {
+  addAccount(data:AccountInput!):Account!
+  addRecord(data:RecordInput!):Record!
+  addTransfer(data:TransferInput):[Record!]!
+}
 
 # type Subscription {}
